@@ -1,0 +1,40 @@
+.headerContainer {
+  background-color: white;
+  /*height: 53px;*/
+  padding: 9px;
+  width: calc(100vw - 250px);
+
+  @media (max-width: 62em) {
+    width: calc(100vw);
+  }
+}
+
+.headerContainerOpened {
+  width: calc(100vw - 56px);
+  background-color: white;
+  /*height: 53px;*/
+  padding: 9px;
+
+  @media (max-width: 62em) {
+    width: calc(100vw);
+  }
+}
+
+.home {
+  padding: 3px;
+  &:hover {
+    background-color: rgb(238, 233, 233);
+    cursor: pointer;
+    border-radius: 3px;
+  }
+}
+.headerUrl {
+  margin-top: 3px;
+  padding: 3px;
+  font-size: 14px;
+  &:hover {
+    background-color: rgb(238, 233, 233);
+    cursor: pointer;
+    border-radius: 3px;
+  }
+}

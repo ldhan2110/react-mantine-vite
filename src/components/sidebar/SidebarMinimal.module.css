@@ -1,0 +1,72 @@
+.navbar {
+  width: 56px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  background-color: #001628;
+
+  @media (max-width: 62em) {
+    display: none;
+  }
+}
+
+.menuCollapse {
+  padding: 1rem;
+}
+
+.navbarMain {
+  flex: 1;
+  margin-top: 10px;
+  padding: 0 2.5px;
+}
+
+.link {
+  width: 48px;
+  height: 40px;
+  border-radius: var(--mantine-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+
+  &:hover {
+    color: white;
+  }
+
+  &[data-active] {
+    &,
+    &:hover {
+      background-color: #1777ff;
+      color: white;
+    }
+  }
+}
+
+.subContext{
+  padding: 8px 8px ;
+  cursor: pointer;
+  font-size: var(--mantine-font-size-sm);
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-0));
+  &:hover{
+    color: white;
+  }
+  &[data-active='true'] {
+    background-color: #1777ff;
+    border-radius: 8px;
+    color: white;
+    
+  }
+  
+}
+
+.dropDown{
+  padding: 6px 6px;
+  background-color: #001628;
+  border-radius: 10px;
+}
+
+.links{
+  font-size: var(--mantine-font-size-sm);
+  color: white;
+}

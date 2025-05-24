@@ -1,0 +1,67 @@
+.control {
+  font-weight: 400;
+  font-size: 14px;
+  display: block;
+  width: 96%;
+  margin-left: 4px;
+  padding: 8px var(--mantine-spacing-md);
+  color: #5f6e74;
+  font-size: var(--mantine-font-size-sm);
+
+  @mixin hover {
+    color: white;
+  }
+
+  &[data-active='true'] {
+    background-color: #1777ff;
+    border-radius: 8px;
+    color: white;
+
+    svg {
+      color: white;
+    }
+  }
+
+  &[data-child-active='true'] {
+    color: #1677ff;
+
+    svg {
+      color: #1677ff;
+    }
+  }
+}
+
+.link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  display: block;
+  text-decoration: none;
+  margin: 2px 4px;
+  padding: 10px;
+  padding-left: 47px;
+  font-size: var(--mantine-font-size-sm);
+  color: #5f6e74;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  &[data-active='true'] {
+    background-color: #1777ff;
+    border-radius: 8px;
+    color: white;
+    svg {
+      color: white;
+    }
+  }
+}
+
+.chevron {
+  transition: transform 200ms ease;
+}
+
+.collapse {
+  background-color: #000c17;
+}
