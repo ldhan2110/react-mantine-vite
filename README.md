@@ -1,2 +1,2 @@
-# react-mantine-vite
+# React-mantine-vite
 A boilerplate template for React Project using Vite &amp; Mantine
