@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useState } from 'react';
 import { Box, Collapse, Group, Text, UnstyledButton } from '@mantine/core';
 import { SlArrowRight } from "react-icons/sl";
 import classes from './LinkGroup.module.css';
@@ -6,7 +6,7 @@ import { useRouter } from '@/hooks';
 import type { Icon } from '@tabler/icons-react';
 
 interface LinksGroupProps {
-  icon?: Icon | ReactNode;
+  icon?: Icon;
   label: string;
   initiallyOpened?: boolean;
   link?: string;
@@ -17,6 +17,7 @@ export function LinkGroup({ icon, label, initiallyOpened, links, link }: LinksGr
   const hasLinks = Array.isArray(links) && links.length != 0;
   const [opened, setOpened] = useState(initiallyOpened || false);
   const { location, navigate} = useRouter();
+  const IconComponent = icon as Icon;
   const items = (hasLinks ? links : []).map(link => (
     <Text
       className={classes.link}
@@ -48,7 +49,7 @@ export function LinkGroup({ icon, label, initiallyOpened, links, link }: LinksGr
         <Group justify="space-between" gap={0}>
           {icon && (
             <Box style={{ display: 'flex', alignItems: 'center' }}>
-              {<>{icon}</>}
+              <IconComponent />
               <Box ml="md">{label}</Box>
             </Box>
           )}

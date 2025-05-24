@@ -1,5 +1,5 @@
 import type { Route } from "@/types";
-import { IconDeviceLaptop, IconSettingsCode } from "@tabler/icons-react";
+import {  IconDeviceLaptop, IconFileSettings } from '@tabler/icons-react';
 
 export const routes: Route[] = [
   {
@@ -9,12 +9,11 @@ export const routes: Route[] = [
   },
  {
     label: 'Master Data',
-    icon: IconSettingsCode,
+    icon: IconFileSettings,
     links: [
       { label: 'Category Management', link: '/master-data/category-management' },
       { label: 'Model Management', link: '/master-data/model-management' },
       { label: 'Supplier Management', link: '/master-data/supplier-management' },
-
       { label: 'Location Management', link: '/master-data/location-management' },
     ],
   },

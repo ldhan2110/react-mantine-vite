@@ -17,7 +17,7 @@ export function Sidebar({ routes, toggleMenu }: SidebarProps) {
     <nav className={classes.navbar}>
       <div className={classes.header}>
         <Group justify="space-between">
-           <Image src="/images/sidebar-logo.png" width={88} height={32} alt="sidebar"/>
+           <Image src="/vite.svg" height={32} alt="sidebar"/>
           <Burger opened={false} onClick={toggleMenu} color="white" size={15} />
         </Group>
       </div>
