@@ -1,4 +1,4 @@
-import { Burger, Flex, Group, ScrollArea, Image } from '@mantine/core';
+import { Burger, Flex, Group, ScrollArea, Image, Text } from '@mantine/core';
 import { LinkGroup } from '@components/link-group/LinkGroup';
 import classes from './Sidebar.module.css';
 import type { Route } from '@/types';
@@ -17,7 +17,12 @@ export function Sidebar({ routes, toggleMenu }: SidebarProps) {
     <nav className={classes.navbar}>
       <div className={classes.header}>
         <Group justify="space-between">
-           <Image src="/vite.svg" height={32} alt="sidebar"/>
+          <Group>
+            <Image src="/vite.svg" h={32} w="auto" fit="contain" alt="sidebar" />
+            <Text fw={500} size="sm" lh={1} mr={3} c="white">
+              Vite App
+            </Text>
+          </Group>
           <Burger opened={false} onClick={toggleMenu} color="white" size={15} />
         </Group>
       </div>

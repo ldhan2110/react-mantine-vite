@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { Box, Collapse, Group, Text, UnstyledButton } from '@mantine/core';
-import { SlArrowRight } from "react-icons/sl";
 import classes from './LinkGroup.module.css';
 import { useRouter } from '@/hooks';
-import type { Icon } from '@tabler/icons-react';
+import { IconChevronRight, type Icon } from '@tabler/icons-react';
 
 interface LinksGroupProps {
   icon?: Icon;
@@ -16,7 +15,7 @@ interface LinksGroupProps {
 export function LinkGroup({ icon, label, initiallyOpened, links, link }: LinksGroupProps) {
   const hasLinks = Array.isArray(links) && links.length != 0;
   const [opened, setOpened] = useState(initiallyOpened || false);
-  const { location, navigate} = useRouter();
+  const { location, navigate } = useRouter();
   const IconComponent = icon as Icon;
   const items = (hasLinks ? links : []).map(link => (
     <Text
@@ -54,8 +53,9 @@ export function LinkGroup({ icon, label, initiallyOpened, links, link }: LinksGr
             </Box>
           )}
           {hasLinks && (
-            <SlArrowRight 
+            <IconChevronRight
               className={classes.chevron}
+              stroke={1.5}
               size={16}
               style={{ transform: opened ? 'rotate(90deg)' : 'none' }}
             />
