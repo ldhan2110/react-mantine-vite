@@ -24,7 +24,7 @@ export const BaseLayout = ({
       }}
       withBorder={false}
     >
-      <AppShell.Navbar className="bg-[rgba(0,0,0,0.45)]">
+      <AppShell.Navbar style={{ backgroundColor: 'rgba(0,0,0,0.45)' }}>
         <Sidebar
           toggleMenu={() => {
             if (mobileOpened) toggleMobile();

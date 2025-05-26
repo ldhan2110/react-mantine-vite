@@ -88,7 +88,7 @@ export function SidebarMinimal({ routes, hidden, toggleMenu }: NavbarMinimalProp
       {!hidden && (
         <nav className={classes.navbar}>
           <Center className={classes.menuCollapse}>
-            <Burger opened={false} onClick={toggleMenu} color="white" size={15} />
+            <Burger opened={false} onClick={toggleMenu} color="white" size="xs" />
           </Center>
 
           <div className={classes.navbarMain}>
