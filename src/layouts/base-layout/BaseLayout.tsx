@@ -39,9 +39,7 @@ export const BaseLayout = ({
           <SidebarMinimal toggleMenu={toggleDesktop} hidden={desktopOpened} routes={routes} />
           <Flex direction="column" style={{ minWidth: 0 }}>
             <Header desktopOpened={desktopOpened} toggleMobile={toggleMobile} />
-            <div className="flex-grow overflow-y-auto" style={{ backgroundColor: backgroundColor }}>
-              {children}
-            </div>
+            <div style={{ backgroundColor: backgroundColor, padding: '8px 0px 0px 8px' }}>{children}</div>
           </Flex>
         </Flex>
       </AppShell.Main>

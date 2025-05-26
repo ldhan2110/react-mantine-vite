@@ -39,7 +39,7 @@ export const Header = ({ desktopOpened, toggleMobile }: HeaderProps) => {
         backgroundColor: 'white',
         position: 'sticky',
         top: 0,
-        zIndex: 1000,
+        zIndex: 100,
       }}
     >
       <Flex justify="space-between" pr="xs">
