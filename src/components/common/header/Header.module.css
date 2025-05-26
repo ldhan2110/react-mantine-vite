@@ -4,6 +4,13 @@
   padding: 9px;
   width: calc(100vw - 250px);
 
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
   @media (max-width: 62em) {
     width: calc(100vw);
   }
@@ -14,6 +21,13 @@
   background-color: white;
   /*height: 53px;*/
   padding: 9px;
+
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
   @media (max-width: 62em) {
     width: calc(100vw);
