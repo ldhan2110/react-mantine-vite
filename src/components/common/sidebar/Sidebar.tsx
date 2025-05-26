@@ -1,5 +1,5 @@
 import { Burger, Flex, Group, ScrollArea, Image, Text } from '@mantine/core';
-import { LinkGroup } from '@components/link-group/LinkGroup';
+import { LinkGroup } from '@/components/common/link-group/LinkGroup';
 import classes from './Sidebar.module.css';
 import type { Route } from '@/types';
 

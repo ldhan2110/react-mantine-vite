@@ -1,4 +1,4 @@
-import { Header, Sidebar, SidebarMinimal } from '@/components';
+import { Header, Sidebar, SidebarMinimal } from '@/components/common';
 import { useToggle } from '@/hooks';
 import { routes } from '@/routes';
 import { AppShell, Flex } from '@mantine/core';

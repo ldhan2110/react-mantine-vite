@@ -25,7 +25,6 @@ type NavbarMinimalProps = {
 function NavbarLink({ icon, label, active, onClick, subContext }: NavbarLinkProps) {
   const { navigate } = useRouter();
   const [opened, setOpened] = useState(false);
-  const IconComponent = icon as Icon;
 
   return (
     <Popover
@@ -43,7 +42,7 @@ function NavbarLink({ icon, label, active, onClick, subContext }: NavbarLinkProp
           onMouseEnter={() => setOpened(true)}
           onMouseLeave={() => setOpened(false)}
         >
-          {<IconComponent />}
+          <>{icon}</>
         </UnstyledButton>
       </Popover.Target>
 
