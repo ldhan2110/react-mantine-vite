@@ -10,6 +10,8 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 dayjs.extend(localizedFormat);
 
+export const DATE_FORMAT = 'DD/MM/YYYY';
+
 export const AppDateProvider: DatesProviderSettings & { timezone: string } = {
   timezone: 'UTC',
   locale: 'vi',

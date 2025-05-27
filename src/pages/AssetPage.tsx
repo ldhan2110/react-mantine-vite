@@ -1,4 +1,4 @@
-import { Button, Input } from '@/components';
+import { Button, DatePicker, DateRangePicker, Input } from '@/components';
 import { useNotification } from '@/hooks';
 import { BaseLayout } from '@/layouts';
 import { Flex } from '@mantine/core';
@@ -27,8 +27,16 @@ export function AssetPage() {
           </Button>
           <Button onClick={() => notifyError('This is a danger button!')}>Click me</Button>
         </Flex>
+
         <Flex gap={5}>
-          <Input label="Input label" required placeholder="Input label" maxLength={100} accept="" />
+          <Input label="Input label" required placeholder="Input label" maxLength={100} value={'Hello World'} />
+          <DatePicker label="Execute Date" required placeholder="Input execute date" value={'2023/03/03'} />
+          <DateRangePicker
+            label="Approval Date"
+            required
+            placeholder="Input Approval Date"
+            value={['2023/03/03', '2023/03/03']}
+          />
         </Flex>
       </Flex>
     </BaseLayout>
