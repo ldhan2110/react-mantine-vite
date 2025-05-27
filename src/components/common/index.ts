@@ -3,3 +3,4 @@ export * from './sidebar/Sidebar';
 export * from './sidebar/SidebarMinimal';
 export * from './header/Header';
 export * from './button/Button';
+export * from './input/Input';
