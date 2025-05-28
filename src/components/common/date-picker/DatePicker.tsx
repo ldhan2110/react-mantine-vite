@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 type DatePickerProps = DateInputProps;
 
-export function DatePicker({ value, ...props }: DatePickerProps) {
+export function DatePicker({ value, w, ...props }: DatePickerProps) {
   const [date, setDate] = useState<DateValue | null>(value || null);
 
   function handleChange(value: DateValue | null) {
@@ -28,10 +28,11 @@ export function DatePicker({ value, ...props }: DatePickerProps) {
               <IconX size={16} color="gray" />
             </ActionIcon>
           ) : (
-            <IconCalendar size={16} opacity={0.5} />
+            <IconCalendar size={16} />
           )}
         </Flex>
       }
+      w={(w as number) + 8}
       {...props}
     />
   );

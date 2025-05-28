@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 type DateRangePickerProps = DatePickerInputProps<'range' | 'default' | 'multiple'>;
 
-export function DateRangePicker({ value, ...props }: DateRangePickerProps) {
+export function DateRangePicker({ value, w, ...props }: DateRangePickerProps) {
   const [dateRange, setDateRange] = useState<DatesRangeValue<DateValue> | [null, null]>(
     (value as DatesRangeValue<DateValue>) || [null, null],
   );
@@ -24,17 +24,10 @@ export function DateRangePicker({ value, ...props }: DateRangePickerProps) {
       valueFormat={DATE_FORMAT}
       placeholder={props.placeholder || `Enter ${String(props.label).toLowerCase()}`}
       clearable
-      styles={{ input: { minWidth: '220px' } }}
       rightSection={
-        <Flex gap="xs">
+        <Flex>
           {dateRange[0] || dateRange[1] ? (
-            <ActionIcon
-              size="sm"
-              variant="transparent"
-              onClick={() => {
-                handleChange([]);
-              }}
-            >
+            <ActionIcon size="xs" variant="transparent" onClick={() => handleChange([])}>
               <IconX size={16} color="gray" />
             </ActionIcon>
           ) : (
@@ -42,6 +35,7 @@ export function DateRangePicker({ value, ...props }: DateRangePickerProps) {
           )}
         </Flex>
       }
+      w={(w as number) + 8}
       {...props}
     />
   );

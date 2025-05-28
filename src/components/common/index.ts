@@ -4,5 +4,7 @@ export * from './sidebar/SidebarMinimal';
 export * from './header/Header';
 export * from './button/Button';
 export * from './input/Input';
+export * from './textarea/TextArea';
 export * from './date-picker/DatePicker';
 export * from './date-range-picker/DateRangePicker';
+export * from './tabs/Tabs';

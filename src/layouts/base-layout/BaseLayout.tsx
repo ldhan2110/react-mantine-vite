@@ -6,7 +6,7 @@ import type { ReactNode } from 'react';
 
 export const BaseLayout = ({
   children,
-  backgroundColor = 'white',
+  backgroundColor = '#e7f5ff',
 }: {
   children: ReactNode;
   backgroundColor?: string;
@@ -39,7 +39,9 @@ export const BaseLayout = ({
           <SidebarMinimal toggleMenu={toggleDesktop} hidden={desktopOpened} routes={routes} />
           <Flex direction="column" style={{ minWidth: 0 }}>
             <Header desktopOpened={desktopOpened} toggleMobile={toggleMobile} />
-            <div style={{ backgroundColor: backgroundColor, padding: '8px 0px 0px 8px' }}>{children}</div>
+            <div className="p-2 h-full" style={{ backgroundColor: backgroundColor, height: '' }}>
+              {children}
+            </div>
           </Flex>
         </Flex>
       </AppShell.Main>
