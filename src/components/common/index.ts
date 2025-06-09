@@ -8,3 +8,4 @@ export * from './textarea/TextArea';
 export * from './date-picker/DatePicker';
 export * from './date-range-picker/DateRangePicker';
 export * from './tabs/Tabs';
+export * from './select/Select';

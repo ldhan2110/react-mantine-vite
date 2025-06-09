@@ -1,4 +1,4 @@
-import { Button, DatePicker, DateRangePicker, Input, TextArea } from '@/components/common';
+import { Button, DatePicker, DateRangePicker, Input, Select, TextArea } from '@/components/common';
 import { useNotification } from '@/hooks';
 import { Fieldset, Flex, Grid, Paper } from '@mantine/core';
 
@@ -32,6 +32,20 @@ export const HomeTab = () => {
               <Button type="primary" onClick={() => notifyInfo('This is a primary button!')}>
                 Click me
               </Button>
+            </Flex>
+          </Flex>
+        </Fieldset>
+
+        <Fieldset legend="Options information">
+          <Flex direction="column" gap={10}>
+            <Flex gap={8}>
+              <Select
+                label="Your favorite library"
+                placeholder="Pick value"
+                required
+                data={['React', 'Angular', 'Vue', 'Svelte']}
+                searchable
+              />
             </Flex>
           </Flex>
         </Fieldset>

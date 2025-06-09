@@ -39,7 +39,7 @@ export function DemoPage() {
           <Button type="secondary" onClick={() => notifyWarning('This is a secondary button!')} color="red">
             Click me
           </Button>
-          <Button onClick={() => notifyError('This is a danger button!')} danger={true}>
+          <Button onClick={() => notifyInfo('This is a danger button!')} danger={true}>
             Click me
           </Button>
           <Button onClick={() => notifyError('This is a danger button!')}>Click me</Button>
